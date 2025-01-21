@@ -2,12 +2,13 @@ import "@/styles/globals.css";
 import "@/styles/ham.css";
 import { cn } from "@/lib/utils";
 import { type Metadata } from "next";
-import { Inter, Open_Sans, Jost } from "next/font/google";
+import { Inter, Open_Sans, Jost, Manrope } from "next/font/google";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
   title: "Bruncho",
-  description: "Welcome to Bruncho, your premier destination for a sophisticated blend of culinary excellence and vibrant ambiance. Indulge in an exquisite dining experience",
+  description:
+    "Welcome to Bruncho, your premier destination for a sophisticated blend of culinary excellence and vibrant ambiance. Indulge in an exquisite dining experience",
   icons: [{ rel: "icon", url: "/images/home/logo.png" }],
 };
 
@@ -29,6 +30,12 @@ const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -36,14 +43,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "theme-custom font-inter flex min-h-screen text-[#FBEAD2] antialiased",
+          "theme-custom flex min-h-screen font-inter text-[#FBEAD2] antialiased",
           open.variable,
           jost.variable,
           inter.variable,
+          manrope.variable,
         )}
       >
         <Providers>{children}</Providers>
       </body>
-    </html >
+    </html>
   );
 }

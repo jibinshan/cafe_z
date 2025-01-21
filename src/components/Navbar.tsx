@@ -42,11 +42,10 @@ const Navbar = ({
     <nav
       className={cn(
         `${position} left-0 top-0 z-50 flex h-[10vh] w-full flex-col items-center bg-transparent p-4 transition-all duration-0 ease-in-out md:left-6 md:top-5 md:h-[95vh] md:w-[300px] md:rounded-tr-[100px] md:py-12`,
-        isScrolled &&
-        "opacity-0 z-0 transition-opacity duration-500 ease-in",
+        isScrolled && "z-0 opacity-0 transition-opacity duration-500 ease-in",
         pathname !== "/" &&
-        "bg-[#794927] md:left-0 md:top-0 md:h-[10vh] md:w-full md:rounded-tr-none md:py-4",
-        pathname === "/" && "bg-[#794927]/90 backdrop-blur-lg",
+          "bg-[#8A7056] md:left-0 md:top-0 md:h-[10vh] md:w-full md:rounded-tr-none md:py-4",
+        pathname === "/" && "bg-[#8A7056]/90 backdrop-blur-lg",
       )}
     >
       <div className="flex h-full w-full max-w-[1300px] flex-col items-center gap-2">
@@ -102,6 +101,7 @@ const Navbar = ({
               width={105}
               height={73}
               alt="logo"
+              className="h-[60px] w-[95px] md:h-[75px] md:w-[105px]"
             />
           </Link>
           <div
@@ -114,49 +114,49 @@ const Navbar = ({
             <Button
               asChild
               variant="link"
-              className="px-0 font-light uppercase hover:font-semibold"
+              className="px-0 font-jost font-light uppercase hover:font-semibold"
             >
               <Link href="/">Home</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 font-light uppercase hover:font-semibold"
+              className="px-0 font-jost font-light uppercase hover:font-semibold"
             >
               <Link href="/menu">Menu</Link>
             </Button>
             {/* <Button
               asChild
               variant="link"
-              className="px-0 font-light uppercase hover:font-semibold"
+              className="px-0 font-jost font-light uppercase hover:font-semibold"
             >
               <Link href="/table-booking">Reservation</Link>
             </Button> */}
             <Button
               asChild
               variant="link"
-              className="px-0 font-light uppercase hover:font-semibold"
+              className="px-0 font-jost font-light uppercase hover:font-semibold"
             >
               <Link href="/about-us">About</Link>
             </Button>
             <Button
               asChild
               variant="link"
-              className="px-0 font-light uppercase hover:font-semibold"
+              className="px-0 font-jost font-light uppercase hover:font-semibold"
             >
               <Link href="/contact">Contact</Link>
             </Button>
             {/* <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent"
+              className="px-0 font-jost uppercase text-accent"
             >
               <Link href="/table-booking">Table Booking</Link>
             </Button> */}
             {/* <Button
               asChild
               variant="link"
-              className="px-0 uppercase text-accent"
+              className="px-0 font-jost uppercase text-accent"
             >
               <Link href="/gift-voucher">Gift Voucher</Link>
             </Button> */}
@@ -174,12 +174,7 @@ const Navbar = ({
                                 </Button>
                             </CartSheet>
                         )} */}
-            <div
-              className={cn(
-                "flex",
-                (pathname !== "/") && "hidden",
-              )}
-            >
+            <div className={cn("flex", pathname !== "/" && "hidden")}>
               <Link href="/menu">
                 <Button
                   variant="outline"
@@ -190,12 +185,7 @@ const Navbar = ({
                 </Button>
               </Link>
             </div>
-            <div
-              className={cn(
-                "hidden",
-                (pathname !== "/") && "flex",
-              )}
-            >
+            <div className={cn("hidden", pathname !== "/" && "flex")}>
               <Link
                 href="tel:+447708433823"
                 target="_blank"
