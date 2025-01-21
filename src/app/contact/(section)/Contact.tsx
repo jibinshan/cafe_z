@@ -31,7 +31,7 @@ const FormValidation = z.object({
 
 type FormData = z.infer<typeof FormValidation>;
 
-const Contact = ({ }) => {
+const Contact = ({}) => {
   const form = useForm<FormData>({
     resolver: zodResolver(FormValidation),
     defaultValues: {
@@ -54,20 +54,23 @@ const Contact = ({ }) => {
     onSuccess: () => {
       toast(
         (t) => (
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <p className="text-center">Your reservation request has been successfully submitted to the restaurant!</p>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <p className="text-center font-jost">
+              Your reservation request has been successfully submitted to the
+              restaurant!
+            </p>
             <button
               onClick={() => {
                 toast.dismiss(t.id);
                 form.reset();
               }}
-              className="bg-primary text-white px-4 py-2 rounded"
+              className="rounded bg-primary px-4 py-2 font-jost text-white"
             >
               OK
             </button>
           </div>
         ),
-        { duration: Infinity }
+        { duration: Infinity },
       );
     },
     onError: () => {
@@ -77,25 +80,30 @@ const Contact = ({ }) => {
     },
   });
   return (
-    <section className="flex h-full w-full items-center justify-center">
+    <section className="flex h-full w-full items-center justify-center bg-[#C4B4A8]">
       <div className="flex h-full w-full flex-col items-center justify-center gap-[2.5rem] px-0 pl-0 md:px-2">
         <div className="flex w-full flex-col lg:flex-row">
           <div
-            style={{ backgroundImage: "url(/images/contact/contact.jpg)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}
+            style={{
+              backgroundImage: "url(/images/contact/contact.jpg)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
             className="relative flex h-screen w-full items-center justify-center lg:ml-[-10px] lg:w-1/2"
           >
-            <div className="absolute left-0 top-0 h-full w-full bg-black/50 z-10"></div>
-            <div className="md:h-7/12 flex w-full md:w-7/12 flex-col gap-16 px-3 md:px-0 items-center justify-center md:justify-start md:items-start z-40">
+            <div className="absolute left-0 top-0 z-10 h-full w-full bg-black/50"></div>
+            <div className="md:h-7/12 z-40 flex w-full flex-col items-center justify-center gap-16 px-3 md:w-7/12 md:items-start md:justify-start md:px-0">
               <div className="flex w-full flex-col gap-10">
                 <div className="flex w-full flex-col gap-2">
-                  <p className="font-[Playfair] text-7xl font-extralight text-center md:text-start">
+                  <p className="text-center font-jost text-7xl font-extralight md:text-start">
                     Get in touch
                   </p>
-                  <p className="text-sm font-light text-center md:text-start">
+                  <p className="text-center font-jost text-sm font-light md:text-start">
                     Use the form on the right to send us a message.
                   </p>
                 </div>
-                <div className="flex items-center justify-center md:justify-start gap-3">
+                <div className="flex items-center justify-center gap-3 md:justify-start">
                   <Button
                     variant="ghost"
                     asChild
@@ -139,43 +147,43 @@ const Contact = ({ }) => {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <p className="text-lg font-semibold">Working Hours</p>
+                <p className="font-jost text-lg font-semibold">Working Hours</p>
                 <div className="flex gap-7">
                   <div className="flex flex-col gap-2">
-                    <p className="text-white">Saturday</p>
-                    <p className="text-white">Sunday</p>
-                    <p className="text-white">Monday</p>
-                    <p className="text-white">Tuesday</p>
-                    <p className="text-white">Wednesday</p>
-                    <p className="text-white">Thursday</p>
-                    <p className="text-white">Friday</p>
+                    <p className="font-jost text-white">Saturday</p>
+                    <p className="font-jost text-white">Sunday</p>
+                    <p className="font-jost text-white">Monday</p>
+                    <p className="font-jost text-white">Tuesday</p>
+                    <p className="font-jost text-white">Wednesday</p>
+                    <p className="font-jost text-white">Thursday</p>
+                    <p className="font-jost text-white">Friday</p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>8:00 - 18:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>8:00 - 17:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>7:30 - 17:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>7:30 - 17:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>7:30 - 17:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>7:30 - 17:00</span>
                     </p>
-                    <p className="flex gap-7 text-white">
+                    <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
                       <span>7:30 - 19:00</span>
                     </p>
@@ -184,22 +192,23 @@ const Contact = ({ }) => {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col pb-24 pt-5 lg:w-1/2 lg:items-center lg:justify-center">
+          <div className="flex w-full flex-col bg-[#252C34] pb-24 pt-5 lg:w-1/2 lg:items-center lg:justify-center">
             <div className="flex w-full flex-col gap-6 px-3 lg:w-3/5 lg:px-0">
               <div className="flex gap-6">
                 <div>
-                  <div className="h-fit w-fit rounded-full  p-2">
+                  <div className="h-fit w-fit rounded-full p-2">
                     <MapPin className="text-white" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='https://maps.app.goo.gl/3c776tRDmvogSitG8'>
-                    <p className="font-inter text-white">
-                      Bruncho, 270 Deansgate,<br /> Manchester M3 4JB, United Kingdom
+                  <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8">
+                    <p className="font-jost text-white">
+                      Bruncho, 270 Deansgate,
+                      <br /> Manchester M3 4JB, United Kingdom
                     </p>
                   </Link>
-                  <Link href='https://maps.app.goo.gl/3c776tRDmvogSitG8'>
-                    <p className="flex gap-2 text-sm text-[#b3b3aa]">
+                  <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8">
+                    <p className="flex gap-2 font-jost text-sm text-[#b3b3aa]">
                       <span>Get Direction</span>
                       <MoveRight />
                     </p>
@@ -213,8 +222,8 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='tel:+447708433823'>
-                    <p className="text-white">+447708433823</p>
+                  <Link href="tel:+447708433823">
+                    <p className="font-jost text-white">+447708433823</p>
                   </Link>
                 </div>
               </div>
@@ -225,8 +234,8 @@ const Contact = ({ }) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href='mailto:info@bruncho.co.uk'>
-                    <p className="text-white">info@bruncho.co.uk</p>
+                  <Link href="mailto:info@bruncho.co.uk">
+                    <p className="font-jost text-white">info@bruncho.co.uk</p>
                   </Link>
                 </div>
               </div>
@@ -245,7 +254,7 @@ const Contact = ({ }) => {
                               <Input
                                 placeholder="First Name"
                                 {...field}
-                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#605343] outline-none placeholder:text-[#787571] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#C4B4A8] font-jost text-[#000] outline-none placeholder:text-[#000] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                               />
                             </FormControl>
                             <FormMessage />
@@ -261,7 +270,7 @@ const Contact = ({ }) => {
                               <Input
                                 placeholder="Phone"
                                 {...field}
-                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#605343] outline-none placeholder:text-[#787571] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#C4B4A8] font-jost text-[#000] outline-none placeholder:text-[#000] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                               />
                             </FormControl>
                             <FormMessage />
@@ -277,7 +286,7 @@ const Contact = ({ }) => {
                               <Input
                                 placeholder="Email"
                                 {...field}
-                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#605343] outline-none placeholder:text-[#787571] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#C4B4A8] font-jost text-[#000] outline-none placeholder:text-[#000] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                               />
                             </FormControl>
                             <FormMessage />
@@ -293,7 +302,7 @@ const Contact = ({ }) => {
                               <Input
                                 placeholder="Reason for contacting (optional)"
                                 {...field}
-                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#605343] outline-none placeholder:text-[#787571] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                className="h-12 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#C4B4A8] font-jost text-[#000] outline-none placeholder:text-[#000] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                               />
                             </FormControl>
                             <FormMessage />
@@ -309,7 +318,7 @@ const Contact = ({ }) => {
                               <Textarea
                                 placeholder="Your Message"
                                 {...field}
-                                className="h-24 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#605343] outline-none placeholder:text-[#787571] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
+                                className="h-24 rounded-none border-b-[3px] border-l-0 border-r-0 border-t-0 border-b-primary bg-[#C4B4A8] font-jost text-[#000] outline-none placeholder:text-[#000] focus-visible:border-b-[2px] focus-visible:border-b-[#bc995d] focus-visible:ring-0"
                               />
                             </FormControl>
                             <FormMessage />
@@ -319,7 +328,12 @@ const Contact = ({ }) => {
                     </div>
                   </div>
                   <div className="flex w-full flex-col pt-7 lg:flex-row">
-                    <Button className="w-full py-6 bg-black text-white hover:bg-black/50" disabled={bookTableMutation.isPending}>Contact US</Button>
+                    <Button
+                      className="w-full bg-black py-6 text-white hover:bg-black/50"
+                      disabled={bookTableMutation.isPending}
+                    >
+                      Contact US
+                    </Button>
                   </div>
                 </form>
               </Form>
@@ -333,7 +347,7 @@ const Contact = ({ }) => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-[500px]"
+            className="h-[500px] w-full"
           ></iframe>
         </div>
       </div>

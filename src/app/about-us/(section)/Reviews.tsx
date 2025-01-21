@@ -10,41 +10,39 @@ import {
 import { useRestaurant } from "@/context/RestaurantContext";
 import Image from "next/image";
 import { useEffect } from "react";
-import gsap, { Power2 } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SplitType from 'split-type';
+import gsap, { Power2 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
-const Reviews = ({ }) => {
+const Reviews = ({}) => {
   const { reviews } = useRestaurant();
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
-
-    const splitType = document.querySelectorAll(".head-review")
+    const splitType = document.querySelectorAll(".head-review");
     splitType.forEach((char, i) => {
       if (char instanceof HTMLElement) {
-        const text = new SplitType(char, { types: "chars" })
+        const text = new SplitType(char, { types: "chars" });
         gsap.from(text.chars, {
           scrollTrigger: {
             trigger: char,
-            start: 'top 80%',
-            end: 'top 20%',
+            start: "top 80%",
+            end: "top 20%",
             scrub: true,
-            markers: false
+            markers: false,
           },
           opacity: 0.2,
-          stagger: 0.4
-        })
+          stagger: 0.4,
+        });
       }
-    })
-
-  }, [])
+    });
+  }, []);
   return (
-    <section className="relative flex h-full w-full justify-center items-center bg-[#261d14]">
-      <div className="flex h-full w-full max-w-[1300px] flex-col items-start justify-center gap-4 py-12 pb-20 md:pb-24 z-40 ">
+    <section className="relative flex h-full w-full items-center justify-center bg-[#252C34]">
+      <div className="z-40 flex h-full w-full max-w-[1300px] flex-col items-start justify-center gap-4 py-12 pb-20 md:pb-24">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2 lg:gap-4">
-          <p className="font-jost non-italic font-light uppercase text-white text-2xl md:text-5xl text-center flex gap-3 justify-center items-center">
+          <p className="non-italic flex items-center justify-center gap-3 text-center font-jost text-2xl font-light uppercase text-white md:text-5xl">
             Hear Our Guests
           </p>
         </div>
@@ -55,21 +53,22 @@ const Reviews = ({ }) => {
                 {reviews.map((review, index) => (
                   <CarouselItem
                     key={index}
-                    className="flex w-full basis-full flex-col gap-6 rounded-none px-6 py-8 md:basis-1/3 border-[2px] bg-[#2f241a] border-[#2f241a]"
+                    className="flex w-full basis-full flex-col gap-6 rounded-none border-[2px] border-[#C4B4A8] bg-[#C4B4A8] px-6 py-8 md:basis-1/3"
                   >
-
                     <div className="flex w-full">
                       {/* {Array.from({ length: review.rating }).map((_, index) => (
                                                 <Icons.star key={index} className="text-[#fec679]" />
                                             ))} */}
-                      <Icons.star key={index} className="text-[#fec679]" />
-                      <Icons.star key={index} className="text-[#fec679]" />
-                      <Icons.star key={index} className="text-[#fec679]" />
-                      <Icons.star key={index} className="text-[#fec679]" />
-                      <Icons.star key={index} className="text-[#fec679]" />
+                      <Icons.star key={index} className="text-[#252C34]" />
+                      <Icons.star key={index} className="text-[#252C34]" />
+                      <Icons.star key={index} className="text-[#252C34]" />
+                      <Icons.star key={index} className="text-[#252C34]" />
+                      <Icons.star key={index} className="text-[#252C34]" />
                     </div>
                     <div className="">
-                      <p className="text-white  line-clamp-4">{review.text}</p>
+                      <p className="line-clamp-4 font-jost text-[#000]">
+                        {review.text}
+                      </p>
                     </div>
                     <div className="flex w-full items-center gap-2">
                       <Image
@@ -82,8 +81,10 @@ const Reviews = ({ }) => {
                         alt={review.author_name}
                       />
                       <div className="flex flex-col gap-2">
-                        <p className="text-white">{review.author_name}</p>
-                        <span className="text-white">
+                        <p className="font-jost text-[#000]">
+                          {review.author_name}
+                        </p>
+                        <span className="font-jost text-[#000]">
                           {review.relative_time_description}
                         </span>
                       </div>
