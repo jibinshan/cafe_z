@@ -5,7 +5,7 @@ const BavetteStory = ({}) => {
     <section className="relative flex h-full w-full items-center justify-center bg-[#C4B4A8] p-4 lg:py-16">
       <div className="flex h-full w-full flex-col items-center justify-center gap-11">
         <h2 className="text-center font-jost text-8xl text-gray-300 md:left-[15%] md:text-8xl">
-          The Bruncho
+          The Cafe Z Bar
           <br />
           Story
         </h2>
@@ -21,25 +21,25 @@ const BavetteStory = ({}) => {
           </div>
           <div className="flex h-full w-full flex-col items-center gap-[2.5rem] p-6 md:w-1/2 md:items-start lg:ml-24">
             <h1 className="max-w-[600px] text-center font-jost text-6xl text-foreground sm:text-7xl md:text-start">
-              From Dream
+              From Vision
               <br />
-              to Cozy Cafe
+              to Flavor
             </h1>
             <p className="max-w-[450px] text-center font-jost font-light leading-[160%] text-foreground md:text-start">
-              Bruncho began as a heartfelt dream to create a space where coffee,
-              cakes, and community come together. Inspired by the warmth of
-              meaningful connections and a passion for rich flavors, we crafted
-              a cozy café where every visit feels like coming home.
+              What started as a dream to bring authentic Turkish flavors to
+              London has grown into a beloved café at the heart of Stoke
+              Newington. Since 2002, Café Z Bar has been a home for those who
+              appreciate rich Middle Eastern spices, hearty breakfasts, and
+              freshly brewed coffee.
               <br />
               <br />
-              From the aroma of freshly brewed coffee to the sight of our
-              lovingly handcrafted cakes, Bruncho is designed to awaken your
-              senses and fill your moments with joy. Over the years, we’ve grown
-              into a haven for cherished conversations and unforgettable
-              memories. Whether it’s a quiet morning with your favorite brew or
-              a lively gathering over sweet indulgences, Bruncho is here to make
-              every visit truly special. With every sip and bite, we aim to
-              brighten your day and warm your heart.
+              From our famous Menemen and Yumurta to our flavorful meze platters
+              and handcrafted wraps, every dish is a reflection of tradition,
+              passion, and community. Our journey from a small café to a vibrant
+              neighborhood favorite has been built on quality ingredients, warm
+              hospitality, and a deep love for sharing great food. While we’ve
+              grown over the years, our mission remains the same—to offer an
+              inviting space where every meal is a moment to savor.
             </p>
           </div>
         </div>

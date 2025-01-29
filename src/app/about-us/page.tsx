@@ -14,8 +14,6 @@ const page = ({}) => {
         <Navbar position="absolute" />
         <Hero />
         <BavetteStory />
-        {/* <OurTeam />
-        <OurManagement /> */}
         <JoinUs />
         <Reviews />
         <Footer />

@@ -124,12 +124,7 @@ const WelcomeRes = ({}) => {
                   transform: "scale(1.5)",
                 }}
               />
-              <p
-                className="head-welcome non-italic flex items-center justify-center gap-3 text-center font-jost text-xl font-[300] uppercase text-white md:text-6xl"
-                // style={{
-                //     transform: "scale(1.5)"
-                // }}
-              >
+              <p className="head-welcome non-italic flex items-center justify-center gap-3 text-center font-jost text-xl font-[300] uppercase text-white md:text-6xl">
                 {text.split("").map((char, index) => (
                   <span key={index} className="key">
                     {char === " " ? "\u00A0" : char}
@@ -163,7 +158,7 @@ const WelcomeRes = ({}) => {
                 className="border-b-[1px] border-b-[#D5A859] pb-1"
               >
                 <Button
-                  className="font-manrope rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
+                  className="rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 font-manrope text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
                   variant="ghost"
                 >
                   Order Now
@@ -187,7 +182,7 @@ const WelcomeRes = ({}) => {
                 className="border-b-[1px] border-b-[#D5A859] pb-1"
               >
                 <Button
-                  className="font-manrope rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
+                  className="rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 font-manrope text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
                   variant="ghost"
                 >
                   Order Now
@@ -211,7 +206,7 @@ const WelcomeRes = ({}) => {
                 className="border-b-[1px] border-b-[#D5A859] pb-1"
               >
                 <Button
-                  className="font-manrope rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
+                  className="rounded-none border-b-[1px] border-b-[#D5A859] px-0 py-1 font-manrope text-sm font-[300] uppercase text-[#D5A859] hover:bg-transparent hover:text-[#D5A859] md:text-lg"
                   variant="ghost"
                 >
                   Order Now

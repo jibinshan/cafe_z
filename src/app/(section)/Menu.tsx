@@ -133,64 +133,60 @@ const Menu = ({}) => {
                     <div className="flex w-full flex-col">
                       <div className="flex w-full items-center gap-1">
                         <p className="w-auto font-jost text-lg text-[#000]">
-                          BRUNCHO FULL ENGLISH
+                          THE ENGLISH BREAKFAST
                         </p>
                         <div className="h-[1px] flex-grow border-b border-b-black pb-[2px]"></div>
                         <p className="flex w-auto items-end font-jost text-lg text-[#000]">
-                          £ 14.90
+                          £ 9.5
                         </p>
                       </div>
                       <p className="font-jost text-sm text-[#000]">
-                        Two free range eggs, Beef sausage, Beef Bacon, Hash
-                        browns, Cherry tomatoes, Garlic Butter Mushrooms served
-                        on a butter toasted sourdough bread
+                        Egg, bacon, sausage, hash brown, mushrooms, grilled
+                        tomatoes, beans, toasted bread
                       </p>
                     </div>
                     <div className="flex w-full flex-col">
                       <div className="flex w-full items-center gap-1">
                         <p className="w-auto font-jost text-lg text-[#000]">
-                          MEDITERRANEAN (V)
+                          THE VEGGIE BREAKFAST (V)
                         </p>
                         <div className="h-[1px] flex-grow border-b border-b-black pb-[2px]"></div>
                         <p className="flex w-auto items-end font-jost text-lg text-[#000]">
-                          £ 38
+                          £ 9.0
                         </p>
                       </div>
                       <p className="font-jost text-sm text-[#000]">
-                        Two free range poached eggs, Red pepper spread,
-                        Sun-dried tomatoes, Olives, Crumbled Feta, Zhoug sauce,
-                        Micro salad, Mixed seeds served on a sourdough bread
+                        Halloumi and spinach on wholegrain toast with veg
+                        sausage, bubble, egg, grilled tomatoes and mushrooms
                       </p>
                     </div>
                     <div className="flex w-full flex-col">
                       <div className="flex w-full items-center gap-1">
                         <p className="w-auto font-jost text-lg text-[#000]">
-                          SMOKED SALMON ROCKET & CREAM CHEESE{" "}
+                          THE SOUTHERN BREAKFAST
                         </p>
                         <div className="h-[1px] flex-grow border-b border-b-black pb-[2px]"></div>
                         <p className="flex w-auto items-end font-jost text-lg text-[#000]">
-                          £ 12.90
+                          £ 8.0
                         </p>
                       </div>
                       <p className="font-jost text-sm text-[#000]">
-                        Focaccia, Dill cream cheese and smoked salmon served
-                        with seasoned fries
+                        Halloumi & feta cheese, jam, olives, boiled egg,
+                        tomatoes, cucumber, avocado, borek.
                       </p>
                     </div>
                     <div className="flex w-full flex-col">
                       <div className="flex w-full items-center gap-1">
                         <p className="w-auto font-jost text-lg text-[#000]">
-                          PISTACHIO BAKLAVA (V)
+                          SADE MENEMEN
                         </p>
                         <div className="h-[1px] flex-grow border-b border-b-black pb-[2px]"></div>
                         <p className="flex w-auto items-end font-jost text-lg text-[#000]">
-                          £ 12.90
+                          £ 6.5
                         </p>
                       </div>
                       <p className="font-jost text-sm text-[#000]">
-                        Thick brioche french toast, Mascarpone topping,
-                        Pistachio flakes served with kinder and vanilla ice
-                        cream
+                        Scrambled eggs mixed with tomatoes, peppers
                       </p>
                     </div>
                   </div>

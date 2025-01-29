@@ -11,7 +11,7 @@ const Hero = ({}) => {
           <div className="flex w-full items-center justify-center lg:w-1/2">
             <div className="mt-20 flex flex-col items-start gap-6 lg:mt-0 lg:w-8/12">
               <h1 className="font-jost text-5xl font-semibold leading-[66px] text-white lg:text-6xl">
-                Bruncho - Where
+                Cafe Z Bar - Where
                 <br />
                 Every Sip <br />
                 and Bite
@@ -19,14 +19,14 @@ const Hero = ({}) => {
                 Tell a Story
               </h1>
               <p className="font-jost font-normal text-white">
-                Welcome to Bruncho, your cozy haven for coffee lovers and cake
-                enthusiasts. Every sip of our freshly brewed coffee and every
-                bite of our handcrafted treats are thoughtfully made to delight.
-                We bring together rich flavors and a warm, inviting atmosphere
-                to create an experience you won’t forget. Whether you’re
-                stopping by for a quick pick-me-up or a leisurely escape,
-                Bruncho is here to make every moment special. At Bruncho, every
-                sip and bite tells a story worth savoring.
+                Ready to indulge in the rich flavors of Turkish cuisine? Whether
+                you're stopping by for a comforting breakfast, a relaxed coffee
+                break, or a hearty meal with friends, Café Z Bar welcomes you to
+                savor the dishes we've perfected over the years. From our
+                signature Menemen to our delightful meze platters and freshly
+                brewed Turkish coffee, every bite is crafted with passion. Come
+                and experience the warmth, flavor, and hospitality that make
+                Café Z Bar a local favorite.
               </p>
             </div>
           </div>

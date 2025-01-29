@@ -21,39 +21,48 @@ const Footer = ({}) => {
             <Link
               href="https://maps.app.goo.gl/3c776tRDmvogSitG8"
               target="_blank"
-              className="text-center font-jost text-white md:text-start"
+              className="text-center font-jost font-[300] text-white"
             >
-              Brunch, 270 Deansgate,
-              <br /> Manchester M3 4JB, United Kingdom
+              58 Stoke Newington High St, London N16 7PB, UK{" "}
             </Link>
             <Link
-              href="tel:+447708433823"
-              className="text-center font-jost text-white md:text-start"
+              href="tel: +442072757523"
+              className="text-center text-white md:text-start"
             >
-              +447708433823
+              +442072757523{" "}
             </Link>
+
             <Link
-              href="mailto:info@bruncho.co.uk"
-              className="text-center font-jost text-white md:text-start"
+              href="mailto:cafezbar.stoky@gmail.com"
+              className="text-center text-white md:text-start"
             >
-              info@bruncho.co.uk
+              cafezbar.stoky@gmail.com
             </Link>
           </div>
           <div className="flex items-center justify-start gap-4">
             <Link
-              href="https://www.instagram.com/bruncho_uk/?hl=en"
-              className="font-jost text-white"
+              href="https://www.tripadvisor.co.uk/Restaurant_Review-g186338-d1014681-Reviews-Cafe_Z_Bar-London_England.html"
+              className="text-white"
             >
               <Icons.instagram />
             </Link>
-            {/* <Link href="" className="text-white font-jost">
+            {/* <Link href="" className="text-white">
                             <Icons.tripAdvisor />
                         </Link> */}
-            <Link
-              href="https://www.google.com/search?hl=en-IN&gl=in&q=Bruncho,+270+Deansgate,+Manchester+M3+4JB,+United+Kingdom"
-              className="font-jost text-white"
-            >
+            <Link href="https://g.co/kgs/dVbkPeZ" className="text-white">
               <Icons.google />
+            </Link>
+            {/* <Link href="" className="text-white">
+                            <Icons.facebook />
+                            </Link> */}
+            <Link href="https://g.co/kgs/dVbkPeZ" className="text-white">
+              <Icons.tripAdvisor />
+            </Link>
+            <Link
+              href="https://www.facebook.com/cafezbarstokey/"
+              className="text-white"
+            >
+              <Icons.facebook />
             </Link>
             {/* <Link href="" className="text-white font-jost">
                             <Icons.facebook />
@@ -140,24 +149,27 @@ const Footer = ({}) => {
         </div>
         <div className="flex w-full flex-col items-center justify-center gap-4 md:w-1/3">
           <div></div>
+
           <p className="font-jost font-semibold uppercase text-white">
-            Opening hours
+            Opening hours:
           </p>
-          <p className="font-jost text-white">Mon - Thur: 7:30 - 17:00</p>
-          <p className="font-jost text-white">Fri : 7:30 - 19:00</p>
-          <p className="font-jost text-white">Sat : 8:00 - 18:00</p>
-          <p className="font-jost text-white">Sun : 8:00 - 17:00</p>
+          <p className="font-jost font-[300] text-white">
+            Monday to Friday : 6:30 AM to 6:30 PM{" "}
+          </p>
+          <p className="font-jost font-[300] text-white">
+            Sunday & Saturday : 7:00 AM to 6:30 PM{" "}
+          </p>
         </div>
       </div>
       <div className="flex w-full items-center justify-center">
         <p className="w-fit px-4 text-center font-jost text-xl text-white">
-          © 2024 Bruncho,all rights reserved |{" "}
+          © 2024 Cafe Z Bar,all rights reserved |{" "}
           <Link
             href="https://foodo.ai"
             className="hover:underline"
             target="_blank"
           >
-            Powered By Foodo
+            Foodo
           </Link>
         </p>
       </div>

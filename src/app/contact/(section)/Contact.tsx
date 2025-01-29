@@ -109,7 +109,7 @@ const Contact = ({}) => {
                     asChild
                     className="px-1 py-1 hover:bg-transparent"
                   >
-                    <Link href="https://www.instagram.com/bruncho_uk/?hl=en">
+                    <Link href="https://www.tripadvisor.co.uk/Restaurant_Review-g186338-d1014681-Reviews-Cafe_Z_Bar-London_England.html">
                       <span className="sr-only">Instagram</span>
                       <Icons.instagram />
                     </Link>
@@ -129,9 +129,29 @@ const Contact = ({}) => {
                     asChild
                     className="px-1 py-1 hover:bg-transparent"
                   >
-                    <Link href="https://www.google.com/search?hl=en-IN&gl=in&q=Bruncho,+270+Deansgate,+Manchester+M3+4JB,+United+Kingdom">
+                    <Link href="https://g.co/kgs/dVbkPeZ">
                       <span className="sr-only">Google</span>
                       <Icons.google />
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    asChild
+                    className="px-1 py-1 hover:bg-transparent"
+                  >
+                    <Link href="https://g.co/kgs/dVbkPeZ">
+                      <span className="sr-only">Tripadvisor</span>
+                      <Icons.tripAdvisor />
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    asChild
+                    className="px-1 py-1 hover:bg-transparent"
+                  >
+                    <Link href="https://www.facebook.com/cafezbarstokey/">
+                      <span className="sr-only">Facebook</span>
+                      <Icons.facebook />
                     </Link>
                   </Button>
                   {/* <Button
@@ -161,31 +181,31 @@ const Contact = ({}) => {
                   <div className="flex flex-col gap-2">
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>8:00 - 18:00</span>
+                      <span>7:00 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>8:00 - 17:00</span>
+                      <span>7:00 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>6:30 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>6:30 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>6:30 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>7:30 - 17:00</span>
+                      <span>6:30 AM to 6:30 PM</span>
                     </p>
                     <p className="flex gap-7 font-jost text-white">
                       <span>:</span>
-                      <span>7:30 - 19:00</span>
+                      <span>6:30 AM to 6:30 PM</span>
                     </p>
                   </div>
                 </div>
@@ -201,11 +221,12 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8">
-                    <p className="font-jost text-white">
-                      Bruncho, 270 Deansgate,
-                      <br /> Manchester M3 4JB, United Kingdom
-                    </p>
+                  <Link
+                    href="https://maps.app.goo.gl/3c776tRDmvogSitG8"
+                    target="_blank"
+                    className="text-center font-jost font-[300] text-white"
+                  >
+                    58 Stoke Newington High St, London N16 7PB, UK{" "}
                   </Link>
                   <Link href="https://maps.app.goo.gl/3c776tRDmvogSitG8">
                     <p className="flex gap-2 font-jost text-sm text-[#b3b3aa]">
@@ -222,8 +243,8 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href="tel:+447708433823">
-                    <p className="font-jost text-white">+447708433823</p>
+                  <Link href="tel:+442072757523">
+                    <p className="font-jost text-white">+442072757523</p>
                   </Link>
                 </div>
               </div>
@@ -234,8 +255,10 @@ const Contact = ({}) => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <Link href="mailto:info@bruncho.co.uk">
-                    <p className="font-jost text-white">info@bruncho.co.uk</p>
+                  <Link href="mailto:cafezbar.stoky@gmail.com">
+                    <p className="font-jost text-white">
+                      cafezbar.stoky@gmail.com
+                    </p>
                   </Link>
                 </div>
               </div>
@@ -342,7 +365,7 @@ const Contact = ({}) => {
         </div>
         <div className="w-full max-w-[1300px] px-4 md:px-0">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9498.007177800067!2d-2.2693783128418215!3d53.4773634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb106947accd9%3A0x8584fcba9b1ebf9f!2sBruncho!5e0!3m2!1sen!2sin!4v1736968399747!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.5324727439543!2d-0.07673782352684456!3d51.558471471824944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c61b7f72741%3A0xeb21e3d97563e1e1!2sCafe%20Z%20Bar.!5e0!3m2!1sen!2sin!4v1738137199455!5m2!1sen!2sin"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"

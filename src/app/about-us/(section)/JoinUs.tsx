@@ -17,13 +17,17 @@ const JoinUs = ({}) => {
           <h1 className="jost max-w-[500px] text-center text-5xl leading-[60px]">
             Join Us for an
             <br />
-            Unforgettable Moment
+            Unforgettable Experience
           </h1>
           <p className="max-w-[450px] text-center font-jost font-light leading-[160%] text-white">
-            Step into Bruncho and immerse yourself in the cozy charm of freshly
-            brewed coffee and handcrafted cakes. Every visit is a blend of
-            warmth, flavor, and memories waiting to be made. Come savor the
-            moments that stay with you long after your last sip or bite.
+            Ready to indulge in the rich flavors of Turkish cuisine? Whether
+            you're stopping by for a comforting breakfast, a relaxed coffee
+            break, or a hearty meal with friends, Café Z Bar welcomes you to
+            savor the dishes we've perfected over the years. From our signature
+            Menemen to our delightful meze platters and freshly brewed Turkish
+            coffee, every bite is crafted with passion. Come and experience the
+            warmth, flavor, and hospitality that make Café Z Bar
+            a local favorite.
           </p>
           <Button className="group w-fit items-center gap-[1.19rem] rounded-none bg-black px-6 py-6 font-semibold uppercase text-white">
             <Link

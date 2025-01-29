@@ -57,34 +57,34 @@ const Navbar = ({
         >
           <div className="hidden flex-row items-center gap-2 md:flex md:gap-4">
             <Link
-              href="https://maps.app.goo.gl/fvPgSt9sysjK8Y9p8"
+              href="https://maps.app.goo.gl/3c776tRDmvogSitG8"
               target="_blank"
               className="flex items-center gap-2 text-sm text-white md:text-sm"
             >
               <MapPin />
-              Country Club, High Street Bushey, London WD23 1TT
+              58 Stoke Newington High St, London N16 7PB, UK{" "}
             </Link>
             <p className="flex items-center gap-2 text-sm text-white md:text-sm">
               <Clock />
-              Sun - Thur: 4pm - 12am, Fri - Sat: 4pm - 2am
+              Mon - Fri: 6:30am - 6:30pm, Sat-Sun: 7am - 6:30pm
             </p>
           </div>
           <div className="hidden flex-row items-center gap-2 md:flex md:gap-4">
             <Link
-              href="tel:02083414814"
+              href="tel:+442072757523"
               target="_blank"
               className="flex items-center gap-2 text-sm text-white md:text-sm"
             >
               <Phone />
-              02083414814
+              +442072757523
             </Link>
             <Link
-              href="info@oralounge.uk"
+              href="cafezbar.stoky@gmail.com"
               target="_blank"
               className="flex items-center gap-2 text-sm text-white md:text-sm"
             >
               <Mail />
-              info@oralounge.uk
+              cafezbar.stoky@gmail.com
             </Link>
           </div>
         </div>
@@ -187,12 +187,12 @@ const Navbar = ({
             </div>
             <div className={cn("hidden", pathname !== "/" && "flex")}>
               <Link
-                href="tel:+447708433823"
+                href="tel:++442072757523"
                 target="_blank"
                 className="flex items-center gap-2 text-lg md:text-sm"
               >
                 <Phone />
-                +447708433823
+                +442072757523{" "}
               </Link>
             </div>
           </div>

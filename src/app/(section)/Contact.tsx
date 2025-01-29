@@ -19,7 +19,7 @@ const Contact = ({}) => {
       <div className="absolute left-0 top-0 h-full w-full bg-[#252C34]/90"></div>
       <div className="z-20 flex w-full flex-col-reverse items-center justify-center gap-4 md:flex-row md:pl-[350px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9498.007177800067!2d-2.2693783128418215!3d53.4773634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb106947accd9%3A0x8584fcba9b1ebf9f!2sBruncho!5e0!3m2!1sen!2sin!4v1736968399747!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.5324727439543!2d-0.07673782352684456!3d51.558471471824944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c61b7f72741%3A0xeb21e3d97563e1e1!2sCafe%20Z%20Bar.!5e0!3m2!1sen!2sin!4v1738137199455!5m2!1sen!2sin"
           style={{ border: 0 }}
           allowFullScreen={false}
           loading="lazy"
@@ -38,42 +38,44 @@ const Contact = ({}) => {
               alt="logo"
             />
           </Link>
-          <div className="flex flex-col items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-1">
             <Link
               href="https://maps.app.goo.gl/3c776tRDmvogSitG8"
               target="_blank"
               className="text-center font-jost font-[300] text-white"
             >
-              Bruncho, 270 Deansgate, Manchester M3 4JB,
-              <br /> United Kingdom, info@bruncho.co.uk
+              58 Stoke Newington High St, London N16 7PB, United Kingdom{" "}
             </Link>
             <Link
-              href="mailto:info@bruncho.co.uk"
+              href="tel: +44 20 7275 7523"
               className="text-center text-white md:text-start"
-            ></Link>
+            >
+              +44 20 7275 7523{" "}
+            </Link>
+
+            <Link
+              href="mailto:cafezbar.stoky@gmail.com"
+              className="text-center text-white md:text-start"
+            >
+              cafezbar.stoky@gmail.com
+            </Link>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <div></div>
             <p className="font-jost font-semibold uppercase text-white">
-              Opening hours
+              Opening hours:
             </p>
             <p className="font-jost font-[300] text-white">
-              Mon – Thu: 07.30 am – 05:00 pm
+              Monday to Friday : 6:30 AM to 6:30 PM{" "}
             </p>
             <p className="font-jost font-[300] text-white">
-              Fri : 07:30 am – 07:00 pm
-            </p>
-            <p className="font-jost font-[300] text-white">
-              Sat : 08:00 am – 07:00 pm
-            </p>
-            <p className="font-jost font-[300] text-white">
-              Sun : 08:00 am – 06:00 pm
+              Sunday & Saturday : 7:00 AM to 6:30 PM{" "}
             </p>
           </div>
 
           <div className="flex items-center justify-start gap-4">
             <Link
-              href="https://www.instagram.com/bruncho_uk/?hl=en"
+              href="https://www.tripadvisor.co.uk/Restaurant_Review-g186338-d1014681-Reviews-Cafe_Z_Bar-London_England.html"
               className="text-white"
             >
               <Icons.instagram />
@@ -81,15 +83,21 @@ const Contact = ({}) => {
             {/* <Link href="" className="text-white">
                             <Icons.tripAdvisor />
                         </Link> */}
-            <Link
-              href="https://www.google.com/search?hl=en-IN&gl=in&q=Bruncho,+270+Deansgate,+Manchester+M3+4JB,+United+Kingdom"
-              className="text-white"
-            >
+            <Link href="https://g.co/kgs/dVbkPeZ" className="text-white">
               <Icons.google />
             </Link>
             {/* <Link href="" className="text-white">
                             <Icons.facebook />
                             </Link> */}
+            <Link href="https://g.co/kgs/dVbkPeZ" className="text-white">
+              <Icons.tripAdvisor />
+            </Link>
+            <Link
+              href="https://www.facebook.com/cafezbarstokey/"
+              className="text-white"
+            >
+              <Icons.facebook />
+            </Link>
           </div>
         </div>
       </div>
@@ -98,13 +106,13 @@ const Contact = ({}) => {
           className="font-inter text-sm font-[400] tracking-[0.8px] text-[#CCAD64]"
           href="https://foodo.ai"
         >
-          © 2025 bruncho. All Rights Reserved
+          © 2025 cafe z bar. All Rights Reserved
         </Link>
         <Link
           className="font-inter text-sm font-[400] capitalize tracking-[0.8px] text-[#CCAD64]"
           href="https://foodo.ai"
         >
-          Powered By Foodo
+          Foodo
         </Link>
       </div>
     </section>
