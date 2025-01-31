@@ -94,7 +94,7 @@
 
   --menubackground: 0, 0%, 3%;
   --menuforeground: 0, 0%, 0%;
-  --menuprimary: 38, 41%, 55%;
+  --menuprimary: 42, 50%, 60%;
   --menusecondary: 35, 84%, 90%;
   --buttonhover: 42, 73%, 41%;
   --itembackground: 0, 0%, 6%;
@@ -104,6 +104,11 @@
   --itembutton: 0, 0%, 9%;
   --buttondisabled: 0, 0%, 17%;
   --mobilebg: 0, 0%, 0%;
+  --menuwhite: 0, 0%, 100%;
+  --borderinput: 0, 0%, 7.45%;
+  --tabbg: 0, 0%, 8.63%;
+  --inputbg: 0, 0%, 4.71%;
+  --placeholder: 36, 18%, 70%;
 }
 
 /* Scrolling Text Start */
@@ -165,10 +170,9 @@
 /* Add this custom CSS in your global styles file */
 @layer utilities {
   .stroke-text {
-    -webkit-text-stroke: 1px #E2A14B;
+    -webkit-text-stroke: 1px #e2a14b;
   }
 }
-
 
 /*model viewer*/
 #model {
@@ -176,18 +180,16 @@
   --progress-bar-height: 0px;
 }
 
-
 /*border gradient*/
 .gradient-border {
   background: #0f1d22;
   position: relative;
   border-radius: 187.5rem 187.5rem 0rem 0rem;
-  ;
   /* Set the same as border width */
 }
 
 .gradient-border::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   /* Same as negative border width */
@@ -197,7 +199,7 @@
   /* Add border width twice (top and bottom) */
   width: calc(100% + 6px);
   /* Add border width twice (left and right) */
-  background: linear-gradient(60deg, #DF9F4B, #010101, #f79533, #f37055);
+  background: linear-gradient(60deg, #df9f4b, #010101, #f79533, #f37055);
   border-radius: 187.5rem 187.5rem 0rem 0rem;
   /* Double the border width for the outer gradient border radius */
   z-index: -1;
@@ -241,7 +243,9 @@
   left: 50%;
   position: absolute;
   background: #c0a58a;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
   width: 0;
 }
 
@@ -290,7 +294,6 @@
   animation-delay: 0.4s;
 }
 
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -313,8 +316,6 @@
   background-color: #fff;
   transform: rotateY(180deg);
 }
-
-
 
 .antonitto-text {
   animation: floating-two 3s infinite ease-in-out;
@@ -371,7 +372,7 @@
 }
 
 .line::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   height: 15vh;
@@ -429,10 +430,7 @@
   transition: transform 0.2s;
 }
 
-
-
 @keyframes pressDown1 {
-
   30%,
   40%,
   100% {
@@ -445,7 +443,6 @@
 }
 
 @keyframes pressDown2 {
-
   70%,
   80%,
   100% {
@@ -458,7 +455,6 @@
 }
 
 @keyframes pressDown3 {
-
   30%,
   40%,
   100% {
@@ -471,7 +467,6 @@
 }
 
 @keyframes pressDown4 {
-
   40%,
   50%,
   100% {
@@ -484,7 +479,6 @@
 }
 
 @keyframes pressDown5 {
-
   20%,
   30%,
   100% {
@@ -497,7 +491,6 @@
 }
 
 @keyframes pressDown6 {
-
   60%,
   70%,
   100% {
@@ -510,7 +503,6 @@
 }
 
 @keyframes pressDown7 {
-
   10%,
   20%,
   100% {
@@ -523,7 +515,6 @@
 }
 
 @keyframes pressDown8 {
-
   35%,
   45%,
   100% {
@@ -534,8 +525,6 @@
     transform: translateY(10px);
   }
 }
-
-
 
 .key:nth-child(1) {
   animation: pressDown1 2s infinite;

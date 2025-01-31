@@ -6,6 +6,25 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      animation: {
+        fadeIn: "fadeIn 1s ease-in-out",
+        progressBar: "progressBar 3s linear infinite",
+        typewriter: "typewriter 3s steps(15) 1s forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        progressBar: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        typewriter: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+      },
       fontFamily: {
         jost: ["var(--font-jost)", ...fontFamily.sans],
         open: ["var(--font-open)", ...fontFamily.sans],
@@ -79,6 +98,11 @@ export default {
         itembutton: "hsl(var(--itembutton))",
         buttondisabled: "hsl(var(--buttondisabled))",
         mobilebg: "hsl(var(--mobilebg))",
+        menuwhite: "hsl(var(--menuwhite))",
+        borderinput: "hsl(var(--borderinput))",
+        tabbg: "hsl(var(--tabbg))",
+        inputbg: "hsl(var(--inputbg))",
+        placeholder: "hsl(var(--placeholder))",
       },
     },
   },
