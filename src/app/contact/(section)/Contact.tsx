@@ -80,8 +80,8 @@ const Contact = ({}) => {
     },
   });
   return (
-    <section className="flex h-full w-full items-center justify-center bg-[#C4B4A8]">
-      <div className="flex h-full w-full flex-col items-center justify-center gap-[2.5rem] px-0 pl-0 md:px-2">
+    <section className="flex h-full w-full items-center justify-center bg-[#252C34]">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-[2.5rem] px-0 pl-0">
         <div className="flex w-full flex-col lg:flex-row">
           <div
             style={{

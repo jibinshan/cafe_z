@@ -4,7 +4,7 @@ const BavetteStory = ({}) => {
   return (
     <section className="relative flex h-full w-full items-center justify-center bg-[#C4B4A8] p-4 lg:py-16">
       <div className="flex h-full w-full flex-col items-center justify-center gap-11">
-        <h2 className="text-center font-jost text-8xl text-gray-300 md:left-[15%] md:text-8xl">
+        <h2 className="text-center font-jost text-8xl text-[#fff] md:left-[15%] md:text-8xl">
           The Cafe Z Bar
           <br />
           Story

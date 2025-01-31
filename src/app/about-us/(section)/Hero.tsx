@@ -20,13 +20,13 @@ const Hero = ({}) => {
               </h1>
               <p className="font-jost font-normal text-white">
                 Ready to indulge in the rich flavors of Turkish cuisine? Whether
-                you're stopping by for a comforting breakfast, a relaxed coffee
-                break, or a hearty meal with friends, Café Z Bar welcomes you to
-                savor the dishes we've perfected over the years. From our
+                you` re stopping by for a comforting breakfast, a relaxed coffee
+                break, or a hearty meal with friends, Cafe Z Bar welcomes you to
+                savor the dishes we` ve perfected over the years. From our
                 signature Menemen to our delightful meze platters and freshly
                 brewed Turkish coffee, every bite is crafted with passion. Come
                 and experience the warmth, flavor, and hospitality that make
-                Café Z Bar a local favorite.
+                Café Z Bar a local favorite.
               </p>
             </div>
           </div>

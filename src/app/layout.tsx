@@ -6,9 +6,8 @@ import { Inter, Open_Sans, Jost, Manrope } from "next/font/google";
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
-  title: "Bruncho",
-  description:
-    "Welcome to Bruncho, your premier destination for a sophisticated blend of culinary excellence and vibrant ambiance. Indulge in an exquisite dining experience",
+  title: "Cafe Z Bar",
+  description: "Cafe Z Bar",
   icons: [{ rel: "icon", url: "/images/home/logo.png" }],
 };
 

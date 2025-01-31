@@ -39,23 +39,28 @@ const LoadingComponent = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const splitType = document.querySelectorAll(".head-welcome");
-  splitType.forEach((char, i) => {
-    if (char instanceof HTMLElement) {
-      const text = new SplitType(char, { types: "chars" });
-      gsap.from(text.chars, {
-        scrollTrigger: {
-          trigger: char,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
-          markers: false,
-        },
-        opacity: 0.2,
-        stagger: 0.3,
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const splitTypeElements = document.querySelectorAll(".head-welcome");
+      splitTypeElements.forEach((char) => {
+        if (char instanceof HTMLElement) {
+          const text = new SplitType(char, { types: "chars" });
+          gsap.from(text.chars, {
+            scrollTrigger: {
+              trigger: char,
+              start: "top 80%",
+              end: "top 20%",
+              scrub: true,
+              markers: false,
+            },
+            opacity: 0.2,
+            stagger: 0.3,
+          });
+        }
       });
     }
-  });
+  }, []);
+
   const text = "Cafe Z Bar";
 
   return (
