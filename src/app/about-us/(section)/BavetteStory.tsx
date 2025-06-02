@@ -4,7 +4,7 @@ const BavetteStory = ({}) => {
   return (
     <section className="relative flex h-full w-full items-center justify-center bg-[#C4B4A8] p-4 lg:py-16">
       <div className="flex h-full w-full flex-col items-center justify-center gap-11">
-        <h2 className="text-center font-jost text-8xl text-[#fff] md:left-[15%] md:text-8xl">
+        <h2 className="text-center font-jost text-5xl text-[#fff] md:left-[15%] md:text-8xl">
           The Cafe Z Bar
           <br />
           Story
@@ -20,7 +20,7 @@ const BavetteStory = ({}) => {
             />
           </div>
           <div className="flex h-full w-full flex-col items-center gap-[2.5rem] p-6 md:w-1/2 md:items-start lg:ml-24">
-            <h1 className="max-w-[600px] text-center font-jost text-6xl text-foreground sm:text-7xl md:text-start">
+            <h1 className="max-w-[600px] text-center font-jost text-5xl text-foreground md:text-start md:text-7xl">
               From Vision
               <br />
               to Flavor

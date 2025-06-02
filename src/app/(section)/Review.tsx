@@ -112,47 +112,54 @@ const Reviews = ({}) => {
           {reviews && (
             <Carousel className="w-full px-4">
               <CarouselContent className="ml-4 flex h-fit w-full justify-center gap-4">
-                {reviews.map((review, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="flex w-full basis-full flex-col gap-6 rounded-none border-[2px] border-[#C4B4A8] bg-[#C4B4A8] px-6 py-8 md:basis-1/3"
-                  >
-                    <div className="flex w-full">
-                      {/* {Array.from({ length: review.rating }).map((_, index) => (
+                {reviews
+                  .filter((review) => review.rating >= 4)
+                  .map((review, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="flex w-full basis-full flex-col gap-6 rounded-none border-[2px] border-[#C4B4A8] bg-[#C4B4A8] px-6 py-8 md:basis-1/3"
+                    >
+                      <div className="flex w-full">
+                        {/* {Array.from({ length: review.rating }).map((_, index) => (
                                                 <Icons.star key={index} className="text-[#fec679]" />
                                             ))} */}
-                      <Icons.star key={index} className="text-[#252c34]" />
-                      <Icons.star key={index} className="text-[#252c34]" />
-                      <Icons.star key={index} className="text-[#252c34]" />
-                      <Icons.star key={index} className="text-[#252c34]" />
-                      <Icons.star key={index} className="text-[#252c34]" />
-                    </div>
-                    <div className="">
-                      <p className="line-clamp-4 font-jost text-[#000]">
-                        {review.text}
-                      </p>
-                    </div>
-                    <div className="flex w-full items-center gap-2">
-                      <Image
-                        src={
-                          review.profile_photo_url ||
-                          "/images/home/reviews/pictures/anna-mathew.svg"
-                        }
-                        width={64}
-                        height={64}
-                        alt={review.author_name}
-                      />
-                      <div className="flex flex-col gap-2">
-                        <p className="font-jost text-[#000]">
-                          {review.author_name}
-                        </p>
-                        <span className="font-jost text-[#000]">
-                          {review.relative_time_description}
-                        </span>
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
                       </div>
-                    </div>
-                  </CarouselItem>
-                ))}
+                      <div className="">
+                        <p className="line-clamp-4 font-jost text-[#000]">
+                          {review.text.text}
+                        </p>
+                      </div>
+                      <div className="flex w-full items-center gap-2">
+                        <Image
+                          src={
+                            review.authorAttribution?.photoUri?.startsWith(
+                              "http",
+                            )
+                              ? review.authorAttribution.photoUri
+                              : "/images/home/reviews/pictures/anna-mathew.svg"
+                          }
+                          width={64}
+                          height={64}
+                          alt={review.authorAttribution.displayName || "Guest"}
+                          className="rounded-full object-cover"
+                        />
+
+                        <div className="flex flex-col gap-2">
+                          <p className="font-jost text-[#000]">
+                            {review.authorAttribution.displayName}
+                          </p>
+                          <span className="font-jost text-[#000]">
+                            {review.relativePublishTimeDescription}
+                          </span>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
               </CarouselContent>
               <div className="group absolute -bottom-12 left-1/2 flex w-fit -translate-x-1/2 transform items-center gap-2 transition-transform duration-300 ease-in-out">
                 <CarouselPrevious className="border-white text-white transition-transform duration-300 ease-in-out group-hover:-translate-x-2" />

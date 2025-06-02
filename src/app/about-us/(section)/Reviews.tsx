@@ -19,6 +19,52 @@ const Reviews = ({}) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
+    mm.add("(max-width:500px)", () => {
+      gsap.to(".review-one", {
+        scrollTrigger: {
+          trigger: ".review-one",
+          toggleActions: "restart none none none",
+          // start: "top 80%", // When the top of the .title enters 80% of the viewport
+          // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
+          // scrub: true
+        },
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        ease: Power2.easeOut,
+        duration: 1.3,
+      });
+    });
+
+    mm.add("(min-width:501px)", () => {
+      gsap.to(".review-one", {
+        scrollTrigger: {
+          trigger: ".review-one",
+          toggleActions: "restart none none none",
+          // start: "top 80%", // When the top of the .title enters 80% of the viewport
+          // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
+          // scrub: true
+        },
+        x: 30,
+        scale: 1,
+        ease: Power2.easeOut,
+        duration: 1.3,
+      });
+    });
+
+    gsap.to(".review-items", {
+      scrollTrigger: {
+        trigger: ".review-items",
+        toggleActions: "restart none none none",
+        // start: "top 80%", // When the top of the .title enters 80% of the viewport
+        // end: "top 50%",   // When the top of the .title reaches 50% of the viewport
+        // scrub: true
+      },
+      scale: 1,
+      ease: Power2.easeOut,
+      duration: 1.3,
+    });
 
     const splitType = document.querySelectorAll(".head-review");
     splitType.forEach((char, i) => {
@@ -38,59 +84,82 @@ const Reviews = ({}) => {
       }
     });
   }, []);
+  const text = "Hear Our Guests";
   return (
-    <section className="relative flex h-full w-full items-center justify-center bg-[#252C34]">
-      <div className="z-40 flex h-full w-full max-w-[1300px] flex-col items-start justify-center gap-4 py-12 pb-20 md:pb-24">
+    <section className="relative flex h-full w-full justify-center bg-[#252C34] md:justify-end">
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+      <div className="z-40 flex h-full w-full flex-col items-start justify-center gap-4 py-12 pb-20 md:pb-24 md:pl-[370px] md:pr-14">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2 lg:gap-4">
           <p className="non-italic flex items-center justify-center gap-3 text-center font-jost text-2xl font-light uppercase text-white md:text-5xl">
-            Hear Our Guests
+            {text.split("").map((char, index) => (
+              <span key={index} className="key head-review font-jost">
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
           </p>
         </div>
-        <div className="flex w-full items-center justify-center p-4">
+        <div
+          className="review-items flex w-full items-center justify-center p-4"
+          style={{
+            transform: "scale(1.3)",
+          }}
+        >
           {reviews && (
             <Carousel className="w-full px-4">
               <CarouselContent className="ml-4 flex h-fit w-full justify-center gap-4">
-                {reviews.map((review, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="flex w-full basis-full flex-col gap-6 rounded-none border-[2px] border-[#C4B4A8] bg-[#C4B4A8] px-6 py-8 md:basis-1/3"
-                  >
-                    <div className="flex w-full">
-                      {/* {Array.from({ length: review.rating }).map((_, index) => (
+                {reviews
+                  .filter((review) => review.rating >= 4)
+                  .map((review, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="flex w-full basis-full flex-col gap-6 rounded-none border-[2px] border-[#C4B4A8] bg-[#C4B4A8] px-6 py-8 md:basis-1/3"
+                    >
+                      <div className="flex w-full">
+                        {/* {Array.from({ length: review.rating }).map((_, index) => (
                                                 <Icons.star key={index} className="text-[#fec679]" />
                                             ))} */}
-                      <Icons.star key={index} className="text-[#252C34]" />
-                      <Icons.star key={index} className="text-[#252C34]" />
-                      <Icons.star key={index} className="text-[#252C34]" />
-                      <Icons.star key={index} className="text-[#252C34]" />
-                      <Icons.star key={index} className="text-[#252C34]" />
-                    </div>
-                    <div className="">
-                      <p className="line-clamp-4 font-jost text-[#000]">
-                        {review.text}
-                      </p>
-                    </div>
-                    <div className="flex w-full items-center gap-2">
-                      <Image
-                        src={
-                          review.profile_photo_url ||
-                          "/images/home/reviews/pictures/anna-mathew.svg"
-                        }
-                        width={64}
-                        height={64}
-                        alt={review.author_name}
-                      />
-                      <div className="flex flex-col gap-2">
-                        <p className="font-jost text-[#000]">
-                          {review.author_name}
-                        </p>
-                        <span className="font-jost text-[#000]">
-                          {review.relative_time_description}
-                        </span>
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
+                        <Icons.star key={index} className="text-[#252c34]" />
                       </div>
-                    </div>
-                  </CarouselItem>
-                ))}
+                      <div className="">
+                        <p className="line-clamp-4 font-jost text-[#000]">
+                          {review.text.text}
+                        </p>
+                      </div>
+                      <div className="flex w-full items-center gap-2">
+                        <Image
+                          src={
+                            review.authorAttribution?.photoUri?.startsWith(
+                              "http",
+                            )
+                              ? review.authorAttribution.photoUri
+                              : "/images/home/reviews/pictures/anna-mathew.svg"
+                          }
+                          width={64}
+                          height={64}
+                          alt={review.authorAttribution.displayName || "Guest"}
+                          className="rounded-full object-cover"
+                        />
+
+                        <div className="flex flex-col gap-2">
+                          <p className="font-jost text-[#000]">
+                            {review.authorAttribution.displayName}
+                          </p>
+                          <span className="font-jost text-[#000]">
+                            {review.relativePublishTimeDescription}
+                          </span>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
               </CarouselContent>
               <div className="group absolute -bottom-12 left-1/2 flex w-fit -translate-x-1/2 transform items-center gap-2 transition-transform duration-300 ease-in-out">
                 <CarouselPrevious className="border-white text-white transition-transform duration-300 ease-in-out group-hover:-translate-x-2" />

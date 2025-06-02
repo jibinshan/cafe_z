@@ -1,8 +1,6 @@
 import BavetteStory from "@/app/about-us/(section)/BavetteStory";
 import Hero from "@/app/about-us/(section)/Hero";
 import JoinUs from "@/app/about-us/(section)/JoinUs";
-// import OurManagement from "@/app/about-us/(section)/OurManagement";
-// import OurTeam from "@/app/about-us/(section)/OurTeam";
 import Reviews from "@/app/about-us/(section)/Reviews";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
